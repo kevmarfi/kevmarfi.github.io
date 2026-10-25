@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kevin Martínez Fierro · Portafolio</title>
+<meta name="description" content="Portafolio profesional de Kevin Martínez Fierro: desarrollo backend Java/Spring Boot y SAP Transportation Management / ABAP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <a class="brand" href="#inicio">Kevin Martínez</a>
+  <nav aria-label="Secciones">
+    <a href="#proyectos">Proyectos</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main id="contenido">
+
+<!-- ============ HERO ============ -->
+<section id="inicio" class="hero">
+  <div class="wrap">
+    <h1>Kevin Martínez Fierro</h1>
+    <p class="lead">Desarrollador backend Java/Spring Boot en transición a SAP ABAP Cloud. Construyo y mantengo sistemas que ya están en producción, y los documento para que otros puedan operarlos.</p>
+
+    <ol class="route" aria-label="Trayectoria">
+      <li class="done">
+        <span class="when">2025 – 2026</span>
+        <strong>Backend Java</strong>
+        <span>EduAdvent, Universidad de Montemorelos</span>
+      </li>
+      <li class="current">
+        <span class="when">2026 – hoy</span>
+        <strong>SAP TM + ABAP</strong>
+        <span>Residencia en Dubbex</span>
+      </li>
+      <li class="next">
+        <span class="when">2027</span>
+        <strong>ABAP Cloud</strong>
+        <span>Certificación C_ABAPD_2601</span>
+      </li>
+    </ol>
+
+    <p class="hero-links">
+      <a class="btn" href="#proyectos">Ver proyectos</a>
+      <a class="btn ghost" href="https://github.com/kevmarfi" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/kevin-mart%C3%ADnez-715532336" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ PROYECTOS ============ -->
+<section id="proyectos" class="projects">
+  <div class="wrap">
+    <h2 class="section-title">Proyectos</h2>
+    <p class="section-intro">Tres proyectos, cada uno documentado con el mismo formato: rol, problema, stack, evidencia y resultados.</p>
+
+    <ul class="project-index">
+      <li><a href="#eduadvent"><strong>EduAdvent</strong><span>Backend de un sistema académico en producción</span></a></li>
+      <li><a href="#sap-tm"><strong>SAP Transportation Management</strong><span>Reporte ABAP de órdenes de flete en S/4HANA</span></a></li>
+      <li><a href="#vanilla-notes"><strong>Vanilla Notes</strong><span>App de notas de escritorio con cifrado local</span></a></li>
+    </ul>
+  </div>
+
+  <!-- ---------- PROYECTO 1: EDUADVENT ---------- -->
+  <article id="eduadvent" class="case">
+    <div class="wrap">
+      <header class="case-head">
+        <p class="case-tag">Experiencia profesional · Producción</p>
+        <h3>EduAdvent</h3>
+        <dl class="facts">
+          <div><dt>Rol</dt><dd>Desarrollador Backend Pasante</dd></div>
+          <div><dt>Organización</dt><dd>Dirección de Sistemas, Universidad de Montemorelos</dd></div>
+          <div><dt>Periodo</dt><dd>Mayo 2025 – mayo 2026</dd></div>
+          <div><dt>Arquitectura</dt><dd>Monolito modular, organizado por dominio</dd></div>
+        </dl>
+      </header>
+
+      <h4>Contexto y problema</h4>
+      <p>EduAdvent es el sistema de gestión escolar que usan instituciones en México, Panamá y El Salvador. Cubre la operación académica (planes de estudio, ciclos, grupos, calificaciones), las finanzas (cobros, becas, pólizas, estados de cuenta) y los portales de alumnos y padres. Al ser un sistema en producción, cada cambio debía entrar sin afectar la operación diaria de alumnos, docentes y administrativos.</p>
+      <p>El equipo necesitaba dos cosas: seguir desarrollando módulos backend con un estilo consistente entre capas, y actualizar la base de datos PostgreSQL a una versión superior sin perder datos ni detener el servicio.</p>
+
+      <h4>Mi responsabilidad</h4>
+      <ul class="bullets">
+        <li>Desarrollé módulos backend con controladores MVC, servicios y repositorios de Spring Data JPA.</li>
+        <li>Lideré la migración de PostgreSQL a una versión superior, con scripts que validaban la integridad de los datos antes y después del cambio.</li>
+        <li>Integré vistas Thymeleaf al flujo MVC y estandaricé cómo se pasan los modelos entre capas.</li>
+        <li>Trabajé con Git y Bitbucket: ramas, pull requests y code review.</li>
+      </ul>
+
+      <h4>Herramientas y tecnologías</h4>
+      <ul class="stack">
+        <li>Java 21</li><li>Spring Boot 4</li><li>Spring Data JPA / Hibernate</li><li>Spring Security</li><li>Thymeleaf</li><li>PostgreSQL</li><li>JasperReports</li><li>JUnit 5 y Mockito</li><li>Maven</li><li>Git</li><li>Bitbucket</li><li>IntelliJ IDEA</li><li>Postman</li><li>Trello</li><li>Metodología ágil</li>
+      </ul>
+
+      <h4>Evidencia técnica</h4>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 470" role="img" aria-labelledby="d1t">
+          <title id="d1t">Arquitectura en capas de EduAdvent: navegador, vistas Thymeleaf, controladores, servicios, repositorios JPA y PostgreSQL</title>
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="arrowhead"/></marker>
+          </defs>
+          <g class="node muted"><rect x="150" y="10" width="260" height="50" rx="6"/><text x="280" y="41">Navegador del usuario</text></g>
+          <line x1="280" y1="60" x2="280" y2="82" class="edge" marker-end="url(#arr)"/>
+          <g class="layer"><rect x="20" y="88" width="520" height="290" rx="10"/><text x="36" y="112" class="layer-label">Aplicación Spring Boot</text></g>
+          <g class="node"><rect x="70" y="124" width="420" height="46" rx="6"/><text x="280" y="152">Vistas Thymeleaf</text></g>
+          <line x1="280" y1="170" x2="280" y2="186" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="70" y="190" width="420" height="46" rx="6"/><text x="280" y="218">Controladores MVC</text></g>
+          <line x1="280" y1="236" x2="280" y2="252" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="70" y="256" width="420" height="46" rx="6"/><text x="280" y="284">Servicios (lógica de negocio)</text></g>
+          <line x1="280" y1="302" x2="280" y2="318" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="70" y="322" width="420" height="46" rx="6"/><text x="280" y="350">Repositorios Spring Data JPA</text></g>
+          <line x1="280" y1="378" x2="280" y2="400" class="edge" marker-end="url(#arr)"/>
+          <g class="node db"><rect x="150" y="404" width="260" height="50" rx="6"/><text x="280" y="435">PostgreSQL</text></g>
+        </svg>
+        <figcaption>Arquitectura en capas del backend. En azul, las capas donde desarrollé.</figcaption>
+      </figure>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 420" role="img" aria-labelledby="d6t">
+          <title id="d6t">Modelo de datos del núcleo académico: Escuela, Plan de estudios, Materia del plan, Ciclo escolar, Grupo del ciclo, Materia del grupo, Docente y Alumno inscrito al plan</title>
+          <g class="node db"><rect x="20" y="20" width="160" height="46" rx="6"/><text x="100" y="48">Escuela</text></g>
+          <g class="node db"><rect x="200" y="20" width="160" height="46" rx="6"/><text x="280" y="48">Nivel</text></g>
+          <g class="node accent"><rect x="20" y="120" width="160" height="46" rx="6"/><text x="100" y="148">Plan de estudios</text></g>
+          <g class="node accent"><rect x="20" y="220" width="160" height="46" rx="6"/><text x="100" y="248">Materia del plan</text></g>
+          <g class="node accent"><rect x="380" y="20" width="160" height="46" rx="6"/><text x="460" y="48">Ciclo escolar</text></g>
+          <g class="node accent"><rect x="380" y="120" width="160" height="46" rx="6"/><text x="460" y="148">Grupo del ciclo</text></g>
+          <g class="node accent"><rect x="200" y="320" width="160" height="56" rx="6"/><text x="280" y="344">Materia del grupo</text><text x="280" y="364" class="small">clase impartida</text></g>
+          <g class="node"><rect x="380" y="320" width="160" height="56" rx="6"/><text x="460" y="352">Docente</text></g>
+          <g class="node"><rect x="200" y="220" width="160" height="46" rx="6"/><text x="280" y="248">Alumno en plan</text></g>
+          <line x1="100" y1="66" x2="100" y2="114" class="edge" marker-end="url(#arr)"/>
+          <line x1="250" y1="66" x2="150" y2="116" class="edge" marker-end="url(#arr)"/>
+          <line x1="100" y1="166" x2="100" y2="214" class="edge" marker-end="url(#arr)"/>
+          <line x1="460" y1="66" x2="460" y2="114" class="edge" marker-end="url(#arr)"/>
+          <line x1="380" y1="143" x2="186" y2="143" class="edge dashed" marker-end="url(#arr)"/>
+          <line x1="440" y1="166" x2="320" y2="316" class="edge" marker-end="url(#arr)"/>
+          <line x1="140" y1="266" x2="230" y2="316" class="edge" marker-end="url(#arr)"/>
+          <line x1="380" y1="348" x2="366" y2="348" class="edge" marker-end="url(#arr)"/>
+          <line x1="180" y1="160" x2="230" y2="216" class="edge dashed" marker-end="url(#arr)"/>
+        </svg>
+        <figcaption>Núcleo del modelo académico (simplificado, con nombres en español). Un plan de estudios define sus materias; cada ciclo escolar abre grupos sobre un plan, y cada materia del grupo tiene un docente asignado.</figcaption>
+      </figure>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 330" role="img" aria-labelledby="d2t">
+          <title id="d2t">Flujo de la migración de PostgreSQL con validación de integridad antes y después</title>
+          <g class="node db"><rect x="20" y="20" width="230" height="56" rx="6"/><text x="135" y="53">PostgreSQL versión anterior</text></g>
+          <g class="node db"><rect x="310" y="20" width="230" height="56" rx="6"/><text x="425" y="53">PostgreSQL versión superior</text></g>
+          <line x1="250" y1="48" x2="304" y2="48" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="20" y="120" width="230" height="56" rx="6"/><text x="135" y="153">Validación previa</text></g>
+          <g class="node accent"><rect x="310" y="120" width="230" height="56" rx="6"/><text x="425" y="153">Validación posterior</text></g>
+          <line x1="135" y1="76" x2="135" y2="114" class="edge" marker-end="url(#arr)"/>
+          <line x1="425" y1="76" x2="425" y2="114" class="edge" marker-end="url(#arr)"/>
+          <line x1="135" y1="176" x2="250" y2="226" class="edge" marker-end="url(#arr)"/>
+          <line x1="425" y1="176" x2="310" y2="226" class="edge" marker-end="url(#arr)"/>
+          <g class="node"><rect x="160" y="230" width="240" height="56" rx="6"/><text x="280" y="263">Comparar resultados</text></g>
+          <text x="280" y="316" class="note">Sin interrupciones en producción</text>
+        </svg>
+        <figcaption>Proceso de migración: los mismos scripts de integridad se corren antes y después para confirmar que los datos no cambiaron.</figcaption>
+      </figure>
+
+      <figure class="code">
+        <pre><code class="lang-java"><span class="c">// Ejemplo ilustrativo del patrón por capas (no es código del sistema)</span>
+<span class="k">@Controller</span>
+<span class="k">@RequestMapping</span>(<span class="s">"/cursos"</span>)
+<span class="k">public class</span> CursoController {
+
+    <span class="k">private final</span> CursoService cursoService;
+
+    <span class="k">public</span> CursoController(CursoService cursoService) {
+        <span class="k">this</span>.cursoService = cursoService;
+    }
+
+    <span class="k">@GetMapping</span>
+    <span class="k">public</span> String listar(Model model) {
+        model.addAttribute(<span class="s">"cursos"</span>, cursoService.listarActivos());
+        <span class="k">return</span> <span class="s">"cursos/lista"</span>; <span class="c">// vista Thymeleaf</span>
+    }
+}</code></pre>
+        <figcaption>El código de EduAdvent es privado de la universidad. Este ejemplo muestra el patrón controlador → servicio → vista que estandaricé.</figcaption>
+      </figure>
+
+      <h4>Dimensión del sistema</h4>
+      <div class="table-wrap">
+        <table>
+          <caption>Medido sobre el código fuente del repositorio</caption>
+          <thead><tr><th>Elemento</th><th>Cantidad</th></tr></thead>
+          <tbody>
+            <tr><td>Módulos de dominio (académico, catálogos, finanzas, alumnos, empleados, seguridad, portales, reportes)</td><td>9</td></tr>
+            <tr><td>Entidades JPA</td><td>61</td></tr>
+            <tr><td>Controladores</td><td>66</td></tr>
+            <tr><td>Rutas HTTP</td><td>372</td></tr>
+            <tr><td>Vistas Thymeleaf</td><td>143</td></tr>
+            <tr><td>Reportes JasperReports (boletines, estados de cuenta)</td><td>29</td></tr>
+            <tr><td>Pruebas automatizadas</td><td>910</td></tr>
+            <tr><td>Clases Java</td><td>464</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note-private">Las cifras son del sistema completo, desarrollado por el equipo. No incluyo capturas ni enlace al repositorio porque el código es propiedad de la universidad y el sistema maneja datos reales de alumnos.</p>
+
+      <h4>Resultados e impacto</h4>
+      <ul class="results">
+        <li><strong>0 interrupciones</strong> en producción durante la migración de PostgreSQL.</li>
+        <li><strong>12 meses</strong> de desarrollo continuo sobre un sistema en producción en 3 países.</li>
+        <li><strong>Un solo estilo</strong> para el manejo de modelos entre capas, lo que facilita el code review del equipo.</li>
+        <li>Completé mi Servicio Social en este proyecto.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- ---------- PROYECTO 2: SAP TM ---------- -->
+  <article id="sap-tm" class="case">
+    <div class="wrap">
+      <header class="case-head">
+        <p class="case-tag">Residencia profesional · Enterprise</p>
+        <h3>SAP Transportation Management</h3>
+        <dl class="facts">
+          <div><dt>Rol</dt><dd>Residente SAP TM: funcional y desarrollador ABAP</dd></div>
+          <div><dt>Organización</dt><dd>Dubbex, consultoría SAP</dd></div>
+          <div><dt>Periodo</dt><dd>Julio 2026 – actual</dd></div>
+          <div><dt>Sistema</dt><dd>SAP S/4HANA 2023, Transportation Management</dd></div>
+        </dl>
+      </header>
+
+      <h4>Contexto y problema</h4>
+      <p>SAP TM gestiona el transporte de mercancía de punta a punta: desde que se planea un viaje hasta que se liquida el costo con el transportista. Entré a la residencia en el lado funcional y en octubre de 2026 me asignaron mis primeros desarrollos ABAP para clientes.</p>
+      <p>El caso principal es un reporte a la medida. El área de logística de un cliente tenía que abrir las <em>freight orders</em> (órdenes de flete) una por una para saber qué material iba en cada viaje, en qué vehículo y con qué remolque. Necesitaban una consulta masiva.</p>
+
+      <h4>Mi responsabilidad</h4>
+      <ul class="bullets">
+        <li>Desarrollé el reporte ABAP de consulta masiva de freight orders, desde la especificación técnica hasta las correcciones posteriores a pruebas.</li>
+        <li>Escribí la especificación técnica: supuestos, objetos, lógica de selección y manejo de casos sin datos.</li>
+        <li>Atendí el informe de hallazgos de pruebas y publiqué la versión corregida de la especificación.</li>
+        <li>Estudié el cálculo de cargos de flete en 10 lecciones (tarifas, escalas, hojas de cálculo, acuerdos de flete, recargos) y las convertí en guías de estudio.</li>
+        <li>Documenté y probé procesos de órdenes de flete, planeación y liquidación, y preparé material de capacitación para el equipo.</li>
+      </ul>
+
+      <h4>Herramientas y tecnologías</h4>
+      <ul class="stack">
+        <li>SAP S/4HANA 2023</li><li>SAP TM</li><li>ABAP orientado a objetos</li><li>Open SQL</li><li>ALV</li><li>SAP GUI / SE38</li><li>Especificaciones WRICEF</li><li>Pruebas funcionales</li><li>ABAP Cloud y RAP (en formación)</li>
+      </ul>
+
+      <h4>Evidencia técnica</h4>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 230" role="img" aria-labelledby="d7t">
+          <title id="d7t">Ciclo del desarrollo: especificación funcional, especificación técnica versión 1.0, desarrollo, pruebas con 11 hallazgos, versión 1.1 corregida y revisión</title>
+          <g class="node muted"><rect x="10" y="20" width="125" height="60" rx="6"/><text x="72" y="45">Especificación</text><text x="72" y="65" class="small">funcional</text></g>
+          <line x1="135" y1="50" x2="149" y2="50" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="155" y="20" width="115" height="60" rx="6"/><text x="212" y="45">Esp. técnica</text><text x="212" y="65" class="small">v1.0</text></g>
+          <line x1="270" y1="50" x2="284" y2="50" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="290" y="20" width="115" height="60" rx="6"/><text x="347" y="55">Desarrollo</text></g>
+          <line x1="405" y1="50" x2="419" y2="50" class="edge" marker-end="url(#arr)"/>
+          <g class="node"><rect x="425" y="20" width="125" height="60" rx="6"/><text x="487" y="45">Pruebas</text><text x="487" y="65" class="small">11 hallazgos</text></g>
+          <line x1="487" y1="80" x2="487" y2="134" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="290" y="140" width="260" height="60" rx="6"/><text x="420" y="165">Esp. técnica v1.1</text><text x="420" y="185" class="small">con las correcciones de pruebas</text></g>
+          <line x1="290" y1="170" x2="226" y2="170" class="edge" marker-end="url(#arr)"/>
+          <g class="node db"><rect x="20" y="140" width="200" height="60" rx="6"/><text x="120" y="165">Revisión</text><text x="120" y="185" class="small">líder técnico, funcional, Basis</text></g>
+        </svg>
+        <figcaption>Ciclo del desarrollo. Escribí las dos versiones de la especificación técnica y el código del reporte.</figcaption>
+      </figure>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 400" role="img" aria-labelledby="d3t">
+          <title id="d3t">Lógica del reporte: pantalla de selección, validaciones, lectura de cabeceras de órdenes, lectura de ítems, clasificación de ítems y salida en ALV</title>
+          <g class="node muted"><rect x="130" y="10" width="300" height="50" rx="6"/><text x="280" y="33">Pantalla de selección</text><text x="280" y="50" class="small">usuario, orden de flete, fecha, máximo de órdenes</text></g>
+          <line x1="280" y1="60" x2="280" y2="78" class="edge" marker-end="url(#arr)"/>
+          <g class="node"><rect x="130" y="82" width="300" height="46" rx="6"/><text x="280" y="110">Validaciones y rango de fechas UTC</text></g>
+          <line x1="280" y1="128" x2="280" y2="146" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="40" y="150" width="480" height="56" rx="6"/><text x="280" y="174">1. Cabeceras: /SCMTMS/D_TORROT</text><text x="280" y="194" class="small">solo órdenes de flete activas, hasta el máximo + 1 para detectar el límite</text></g>
+          <line x1="280" y1="206" x2="280" y2="224" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="40" y="228" width="480" height="56" rx="6"/><text x="280" y="252">2. Ítems: /SCMTMS/D_TORITE</text><text x="280" y="272" class="small">FOR ALL ENTRIES de las cabeceras: material, vehículo, remolque</text></g>
+          <line x1="140" y1="284" x2="110" y2="306" class="edge" marker-end="url(#arr)"/>
+          <line x1="280" y1="284" x2="280" y2="306" class="edge" marker-end="url(#arr)"/>
+          <line x1="420" y1="284" x2="450" y2="306" class="edge" marker-end="url(#arr)"/>
+          <g class="node"><rect x="20" y="310" width="170" height="40" rx="6"/><text x="105" y="335" class="small">Materiales y sub-ítems</text></g>
+          <g class="node"><rect x="200" y="310" width="160" height="40" rx="6"/><text x="280" y="335" class="small">Vehículos</text></g>
+          <g class="node"><rect x="370" y="310" width="170" height="40" rx="6"/><text x="455" y="335" class="small">Remolques</text></g>
+          <g class="node db"><rect x="130" y="362" width="300" height="34" rx="6"/><text x="280" y="384">ALV: una fila por material</text></g>
+        </svg>
+        <figcaption>Diseño del reporte. Dos lecturas a la base de datos en lugar de una por orden, y un tope configurable de órdenes para no saturar el sistema.</figcaption>
+      </figure>
+
+      <figure class="code">
+        <pre><code class="lang-abap"><span class="c">* Estructura del reporte (ilustrativa, simplificada; no es el código entregado)</span>
+<span class="k">CLASS</span> lcl_report <span class="k">DEFINITION</span>.
+  <span class="k">PUBLIC SECTION</span>.
+    <span class="k">METHODS</span> run.
+  <span class="k">PRIVATE SECTION</span>.
+    <span class="k">METHODS</span>: get_headers, get_items, build_output, display.
+<span class="k">ENDCLASS</span>.
+
+<span class="k">METHOD</span> get_headers.
+  <span class="k">SELECT</span> db_key, tor_id, created_by, created_on
+    <span class="k">FROM</span> /scmtms/d_torrot
+    <span class="k">WHERE</span> tor_cat   = <span class="s">'TO'</span>
+      <span class="k">AND</span> lifecycle <span class="k">IN</span> ( <span class="s">'01'</span>, <span class="s">'02'</span> )
+      <span class="k">AND</span> tor_id    <span class="k">IN</span> @s_torid
+    <span class="k">ORDER BY</span> tor_id
+    <span class="k">INTO TABLE</span> @mt_headers
+    <span class="k">UP TO</span> @( p_max + 1 ) <span class="k">ROWS</span>.  <span class="c">" una fila extra indica que se alcanzó el límite</span>
+<span class="k">ENDMETHOD</span>.
+
+<span class="k">START-OF-SELECTION</span>.
+  <span class="k">NEW</span> lcl_report( )-&gt;run( ).</code></pre>
+        <figcaption>Toda la lógica vive en una clase local. Las tablas <code>/SCMTMS/*</code> son estándar de SAP TM.</figcaption>
+      </figure>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Hallazgos de pruebas que atendí</caption>
+          <thead><tr><th>Tipo</th><th>Ejemplos</th><th>Cantidad</th></tr></thead>
+          <tbody>
+            <tr><td>Defecto</td><td>Filas duplicadas, columnas sin encabezado, ayuda F1 vacía, errores sin mensaje</td><td>9</td></tr>
+            <tr><td>Mejora</td><td>Buscar por número de orden, etiquetas en lenguaje del usuario</td><td>2</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Resultados e impacto</h4>
+      <ul class="results">
+        <li><strong>Primer desarrollo ABAP entregado</strong> a 3 meses de entrar a la residencia: un reporte que reemplaza abrir órdenes de flete una por una.</li>
+        <li><strong>11 hallazgos de pruebas</strong> analizados y llevados a una especificación técnica corregida (v1.1).</li>
+        <li><strong>Especificación técnica completa</strong> revisada por el líder técnico, el consultor funcional y Basis.</li>
+        <li><strong>10 lecciones</strong> de cálculo de cargos de flete convertidas en guías de estudio.</li>
+      </ul>
+      <p class="note-private">Por confidencialidad no publico el nombre del cliente, capturas del sistema ni el código entregado.</p>
+    </div>
+  </article>
+
+  <!-- ---------- PROYECTO 3: VANILLA NOTES ---------- -->
+  <article id="vanilla-notes" class="case">
+    <div class="wrap">
+      <header class="case-head">
+        <p class="case-tag">Proyecto personal · Versión 1.0.0 publicada</p>
+        <h3>Vanilla Notes</h3>
+        <dl class="facts">
+          <div><dt>Rol</dt><dd>Autor único: requisitos, arquitectura, código, pruebas e instalador</dd></div>
+          <div><dt>Tipo</dt><dd>Aplicación de escritorio para Windows, notas en Markdown</dd></div>
+          <div><dt>Licencia</dt><dd>MIT, código abierto</dd></div>
+          <div><dt>Repositorio</dt><dd><a href="https://github.com/kevmarfi/vanilla-notes" target="_blank" rel="noopener">github.com/kevmarfi/vanilla-notes</a></dd></div>
+        </dl>
+      </header>
+
+      <h4>Contexto y problema</h4>
+      <p>Las apps de notas populares guardan todo en la nube y piden una cuenta. Quería una que funcionara completa sin internet, con las notas en mi equipo y cifradas si así lo elijo.</p>
+      <p>La primera versión era web: un servidor en Node.js sin frameworks, con ruteo y JWT propios. Al plantear llevarla al escritorio, decidí reescribirla como aplicación nativa de Windows en C# en lugar de envolverla en Electron. La app no abre ninguna conexión ni escucha en ningún puerto.</p>
+
+      <h4>Qué hace</h4>
+      <ul class="bullets">
+        <li>Perfiles privados con contraseña: la base de datos y los adjuntos se cifran en disco. Se recuperan con un código de recuperación o con Windows Hello.</li>
+        <li>Editor visual y editor de Markdown con vista previa. La nota siempre se guarda como Markdown, sin perder formato al cambiar de editor.</li>
+        <li>Carpetas, etiquetas, notas fijadas, papelera y búsqueda de texto completo que ignora acentos y mayúsculas.</li>
+        <li>Adjuntos e imágenes pegadas desde el portapapeles, con arrastrar y soltar.</li>
+        <li>Exportación a Markdown, HTML o PDF, respaldos automáticos diarios e importación desde la versión web.</li>
+        <li>Interfaz en español e inglés, con temas claro, oscuro y neutro.</li>
+      </ul>
+
+      <h4>Herramientas y tecnologías</h4>
+      <ul class="stack">
+        <li>C# 14</li><li>.NET 10</li><li>WPF</li><li>MVVM (CommunityToolkit)</li><li>SQLite cifrado (SQLite3 Multiple Ciphers)</li><li>FTS5</li><li>AES-256-GCM</li><li>PBKDF2</li><li>Windows Hello</li><li>Markdig</li><li>AvalonEdit</li><li>xUnit v3</li><li>GitHub Actions</li><li>Inno Setup</li>
+      </ul>
+
+      <h4>Evidencia técnica</h4>
+
+      <div class="gallery">
+        <figure class="shot">
+          <a href="assets/img/vanilla-notes-1.png" target="_blank" rel="noopener"><img src="assets/img/vanilla-notes-1.png" alt="Vanilla Notes en modo visual con carpetas, etiquetas, lista de notas y una nota abierta" onerror="this.parentElement.classList.add('missing')"></a>
+          <div class="shot-missing">Captura pendiente: ventana principal</div>
+          <figcaption>Editor visual: carpetas y etiquetas a la izquierda, lista de notas y la nota formateada, sin escribir Markdown.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="assets/img/vanilla-notes-2.png" target="_blank" rel="noopener"><img src="assets/img/vanilla-notes-2.png" alt="Vanilla Notes en modo Markdown con el código fuente y la vista previa lado a lado" onerror="this.parentElement.classList.add('missing')"></a>
+          <div class="shot-missing">Captura pendiente: editor de Markdown con vista previa</div>
+          <figcaption>Modo Markdown: el código fuente a la izquierda y la vista previa a la derecha, con bloques de código coloreados.</figcaption>
+        </figure>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 400" role="img" aria-labelledby="d4t">
+          <title id="d4t">Arquitectura de Vanilla Notes: proyecto App en WPF que depende del proyecto Core, el cual accede a SQLite cifrado y a archivos de adjuntos cifrados</title>
+          <g class="layer"><rect x="20" y="10" width="520" height="100" rx="10"/><text x="36" y="34" class="layer-label">VanillaNotes.App (WPF)</text></g>
+          <g class="node"><rect x="50" y="48" width="140" height="46" rx="6"/><text x="120" y="76">Vistas XAML</text></g>
+          <line x1="190" y1="71" x2="204" y2="71" class="edge" marker-end="url(#arr)"/>
+          <g class="node"><rect x="210" y="48" width="140" height="46" rx="6"/><text x="280" y="76">ViewModels</text></g>
+          <g class="node"><rect x="370" y="48" width="140" height="46" rx="6"/><text x="440" y="76">Editores</text></g>
+          <line x1="280" y1="110" x2="280" y2="136" class="edge" marker-end="url(#arr)"/>
+          <g class="layer"><rect x="20" y="142" width="520" height="150" rx="10"/><text x="36" y="166" class="layer-label">VanillaNotes.Core (sin referencia a WPF)</text></g>
+          <g class="node accent"><rect x="50" y="180" width="140" height="46" rx="6"/><text x="120" y="208">Servicios</text></g>
+          <g class="node accent"><rect x="210" y="180" width="140" height="46" rx="6"/><text x="280" y="208">Repositorios</text></g>
+          <g class="node accent"><rect x="370" y="180" width="140" height="46" rx="6"/><text x="440" y="208">Seguridad</text></g>
+          <line x1="190" y1="203" x2="204" y2="203" class="edge" marker-end="url(#arr)"/>
+          <g class="node muted"><rect x="50" y="236" width="460" height="40" rx="6"/><text x="280" y="261" class="small">Validación · Markdown · Exportación · Almacenamiento</text></g>
+          <line x1="280" y1="292" x2="280" y2="318" class="edge" marker-end="url(#arr)"/>
+          <line x1="440" y1="292" x2="440" y2="318" class="edge" marker-end="url(#arr)"/>
+          <g class="node db"><rect x="150" y="324" width="230" height="56" rx="6"/><text x="265" y="349">SQLite cifrado</text><text x="265" y="369" class="small">+ índice FTS5</text></g>
+          <g class="node db"><rect x="400" y="324" width="140" height="56" rx="6"/><text x="470" y="349">Adjuntos</text><text x="470" y="369" class="small">cifrados</text></g>
+        </svg>
+        <figcaption>Dos proyectos con una sola dirección de dependencia. Las reglas de negocio no conocen la interfaz, así que se prueban sin abrir ninguna ventana.</figcaption>
+      </figure>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 260" role="img" aria-labelledby="d5t">
+          <title id="d5t">Modelo de cifrado: una llave aleatoria por perfil, envuelta por la contraseña, el código de recuperación y Windows Hello</title>
+          <g class="node"><rect x="20" y="20" width="160" height="50" rx="6"/><text x="100" y="50">Contraseña</text></g>
+          <g class="node"><rect x="200" y="20" width="160" height="50" rx="6"/><text x="280" y="42">Código de</text><text x="280" y="60">recuperación</text></g>
+          <g class="node"><rect x="380" y="20" width="160" height="50" rx="6"/><text x="460" y="50">Windows Hello</text></g>
+          <line x1="100" y1="70" x2="250" y2="114" class="edge" marker-end="url(#arr)"/>
+          <line x1="280" y1="70" x2="280" y2="114" class="edge" marker-end="url(#arr)"/>
+          <line x1="460" y1="70" x2="310" y2="114" class="edge" marker-end="url(#arr)"/>
+          <g class="node accent"><rect x="150" y="120" width="260" height="56" rx="6"/><text x="280" y="144">Llave del perfil (256 bits)</text><text x="280" y="164" class="small">solo existe en memoria</text></g>
+          <line x1="280" y1="176" x2="280" y2="200" class="edge" marker-end="url(#arr)"/>
+          <g class="node db"><rect x="130" y="204" width="300" height="46" rx="6"/><text x="280" y="232">Base de datos y adjuntos cifrados</text></g>
+        </svg>
+        <figcaption>Cada secreto envuelve la misma llave con PBKDF2 (600,000 iteraciones) y AES-256-GCM. La contraseña no se guarda en ninguna forma: es correcta si logra desenvolver la llave.</figcaption>
+      </figure>
+
+      <figure class="code">
+        <pre><code class="lang-sql"><span class="c">-- Búsqueda de texto completo: el índice se sincroniza con triggers</span>
+<span class="k">CREATE VIRTUAL TABLE</span> notes_fts <span class="k">USING</span> fts5(
+  title, content,
+  content = <span class="s">'notes'</span>, content_rowid = <span class="s">'id'</span>,
+  tokenize = <span class="s">'unicode61 remove_diacritics 2'</span>
+);
+
+<span class="k">CREATE TRIGGER</span> notes_fts_update <span class="k">AFTER UPDATE OF</span> title, content <span class="k">ON</span> notes <span class="k">BEGIN</span>
+  <span class="k">INSERT INTO</span> notes_fts (notes_fts, rowid, title, content)
+    <span class="k">VALUES</span> (<span class="s">'delete'</span>, old.id, old.title, old.content);
+  <span class="k">INSERT INTO</span> notes_fts (rowid, title, content)
+    <span class="k">VALUES</span> (new.id, new.title, new.content);
+<span class="k">END</span>;</code></pre>
+        <figcaption>Extracto de la migración inicial. El índice vive dentro del mismo archivo, así que también queda cifrado.</figcaption>
+      </figure>
+
+      <h4>Resultados e impacto</h4>
+      <ul class="results">
+        <li><strong>Versión 1.0.0</strong> publicada con instalador para Windows x64 y ARM64 que no requiere .NET instalado.</li>
+        <li><strong>282 pruebas automatizadas</strong> con xUnit, ejecutadas en cada push por GitHub Actions. Una advertencia del compilador hace fallar el build.</li>
+        <li><strong>39 requisitos funcionales</strong> documentados y numerados, junto con la arquitectura, el modelo de datos, las decisiones técnicas y la operación.</li>
+        <li><strong>6 paquetes externos</strong>, cada uno justificado por escrito. El cifrado, Windows Hello y la exportación usan solo lo que trae .NET.</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- ============ HABILIDADES ============ -->
+<section id="habilidades" class="skills">
+  <div class="wrap">
+    <h2 class="section-title">Habilidades</h2>
+    <dl class="skill-grid">
+      <div><dt>SAP</dt><dd>SAP TM (funcional), ABAP clásico, ABAP Cloud y RAP (en formación), SAP BTP, SAP Fiori</dd></div>
+      <div><dt>Backend</dt><dd>Java, Spring Boot, Spring Data JPA, REST APIs, patrón MVC, C# / .NET, Node.js</dd></div>
+      <div><dt>Frontend</dt><dd>Thymeleaf, HTML, CSS, JavaScript, React, WPF / XAML</dd></div>
+      <div><dt>Bases de datos</dt><dd>PostgreSQL, SQLite, optimización SQL, migración de esquemas</dd></div>
+      <div><dt>Herramientas</dt><dd>Git, GitHub, GitHub Actions, Bitbucket, Postman, IntelliJ IDEA, Trello</dd></div>
+      <div><dt>Idiomas</dt><dd>Español nativo, inglés intermedio (B1) conversacional y técnico</dd></div>
+    </dl>
+    <p class="edu"><strong>Ing. en Gestión de Tecnologías de la Información</strong>, Universidad de Montemorelos. Egreso estimado: mayo 2027.<br>
+    Certificación SAP ABAP Cloud (C_ABAPD_2601) en preparación para 2027.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <h2 class="section-title">Contacto</h2>
+    <p>Busco oportunidades en desarrollo SAP ABAP y backend. Escríbeme.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:keviniron003@gmail.com">keviniron003@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/kevin-mart%C3%ADnez-715532336" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/kevmarfi" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot"><div class="wrap">Kevin Martínez Fierro · Monterrey, Nuevo León · 2026</div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
